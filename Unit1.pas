@@ -71,16 +71,12 @@ procedure TForm1.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
    If key = 40 Then
-                   Begin
-                   direc := 4;
-                   If Image1.top < 10 Then
-                    Timer1.Enabled := True
-                   Else
-                       If Image1.Top < 293 Then
-                    Timer1.Enabled := True
-                       Else
-                    Timer1.Enabled := False
-                    End
+     Begin
+       direc := 4;
+       If Image1.top < 10 Then Timer1.Enabled := True
+       Else If Image1.Top < 293 Then Timer1.Enabled := True
+       Else Timer1.Enabled := False
+     End
    Else
    If key = 38 Then
                    Begin
